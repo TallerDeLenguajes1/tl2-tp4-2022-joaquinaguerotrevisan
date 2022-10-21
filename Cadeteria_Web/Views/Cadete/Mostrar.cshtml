@@ -1,0 +1,16 @@
+@model List<Cadeteria_Web.Models.Cadete>
+
+@{
+    ViewData["Title"] = "Lista de cadetes";
+}
+
+<section>
+    @foreach (var Cadete in @Model)
+    {
+        <a>
+            <h2>@Cadete.Get_Nombre()</h2>
+            <p>Domicilio: @Cadete.Get_Domicilio()</p>
+            <p>Telefono: @Cadete.Get_Telefono()</p>
+        </a>
+    }
+</section>
